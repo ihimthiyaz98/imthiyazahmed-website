@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Imthiyaz Ahmed - Professional Photography Portfolio">
+    <title>Imthiyaz Ahmed - Photography Portfolio</title>
+    
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    
+    <!-- Preload critical resources -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div id="loading-screen">
+        <div class="loader">
+            <div class="camera-icon">📷</div>
+            <div class="loading-text">Loading...</div>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">Imthiyaz Ahmed</div>
+            <div class="nav-menu">
+                <a href="#home" class="nav-link active">Home</a>
+                <a href="#portfolio" class="nav-link">Portfolio</a>
+                <a href="#about" class="nav-link">About</a>
+                <a href="#contact" class="nav-link">Contact</a>
+            </div>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-section">
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1 class="hero-title">
+                    <span class="line">Imthiyaz Ahmed</span>
+                </h1>
+                <p class="hero-subtitle">Capturing Moments, Creating Memories</p>
+                <p class="hero-description">Professional Photography | Visual Storytelling</p>
+            </div>
+        </div>
+        
+        <!-- 3D Canvas Container -->
+        <div id="canvas-container"></div>
+        
+        <!-- Scroll Indicator -->
+        <div class="scroll-indicator">
+            <div class="mouse">
+                <div class="wheel"></div>
+            </div>
+            <p>Scroll to explore</p>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="portfolio-section">
+        <div class="section-header">
+            <h2 class="section-title">Portfolio</h2>
+            <p class="section-subtitle">Explore my work across different categories</p>
+        </div>
+
+        <!-- Category Filter -->
+        <div class="category-filter">
+            <button class="filter-btn active" data-category="all">All</button>
+            <button class="filter-btn" data-category="events">Events</button>
+            <button class="filter-btn" data-category="fashion">Fashion</button>
+            <button class="filter-btn" data-category="product">Product</button>
+            <button class="filter-btn" data-category="wedding">Wedding</button>
+            <button class="filter-btn" data-category="commercial">Commercial</button>
+            <button class="filter-btn" data-category="newborn">Newborn/Toddler</button>
+            <button class="filter-btn" data-category="maternity">Maternity</button>
+            <button class="filter-btn" data-category="outdoor">Outdoor</button>
+            <button class="filter-btn" data-category="portraits">Portraits</button>
+            <button class="filter-btn" data-category="couples">Couples</button>
+            <button class="filter-btn" data-category="retouch">Retouch</button>
+            <button class="filter-btn" data-category="lifestyle">Lifestyle</button>
+        </div>
+
+        <!-- Portfolio Grid -->
+        <div class="portfolio-grid">
+            <!-- Events -->
+            <div class="portfolio-item" data-category="events">
+                <div class="portfolio-image">
+                    <img src="https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=800" alt="Events Photography" loading="lazy">
+                    <div class="portfolio-overlay">
+                        <h3>Events</h3>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Fashion -->
+            <div class="portfolio-item" data-category="fashion">
+                <div class="portfolio-image">
+                    <img src="https://images.unsplash.com/photo-1469334031218-e382a71b716b?w=800" alt="Fashion Photography" loading="lazy">
+                    <div class="portfolio-overlay">
+                        <h3>Fashion</h3>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product -->
+            <div class="portfolio-item" data-category="product">
+                <div class="portfolio-image">
+                    <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=800" alt="Product Photography" loading="lazy">
+                    <div class="portfolio-overlay">
+                        <h3>Product</h3>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Wedding -->
+            <div class="portfolio-item" data-category="wedding">
+                <div class="portfolio-image">
+                    <img src="https://images.unsplash.com/photo-1519741497674-611481863552?w=800" alt="Wedding Photography" loading="lazy">
+                    <div class="portfolio-overlay">
+                        <h3>Wedding</h3>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Commercial -->
+            <div class="portfolio-item" data-category="commercial">
+                <div class="portfolio-image">
+                    <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?w=800" alt="Commercial Photography" loading="lazy">
+                    <div class="portfolio-overlay">
+                        <h3>Commercial</h3>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Newborn/Toddler -->
+            <div class="portfolio-item" data-category="newborn">
+                <div class="portfolio-image">
+                    <img src="https://images.unsplash.com/photo-1515488042361-ee00e0ddd4e4?w=800" alt="Newborn Photography" loading="lazy">
+                    <div class="portfolio-overlay">
+                        <h3>Newborn/Toddler</h3>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Maternity -->
+            <div class="portfolio-item" data-category="maternity">
+                <div class="portfolio-image">
+                    <img src="https://images.unsplash.com/photo-1493894473891-10fc1e5dbd22?w=800" alt="Maternity Photography" loading="lazy">
+                    <div class="portfolio-overlay">
+                        <h3>Maternity</h3>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Outdoor -->
+            <div class="portfolio-item" data-category="outdoor">
+                <div class="portfolio-image">
+                    <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800" alt="Outdoor Photography" loading="lazy">
+                    <div class="portfolio-overlay">
+                        <h3>Outdoor</h3>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Portraits -->
+            <div class="portfolio-item" data-category="portraits">
+                <div class="portfolio-image">
+                    <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=800" alt="Portrait Photography" loading="lazy">
+                    <div class="portfolio-overlay">
+                        <h3>Portraits</h3>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Couples -->
+            <div class="portfolio-item" data-category="couples">
+                <div class="portfolio-image">
+                    <img src="https://images.unsplash.com/photo-1516589178581-6cd7833ae3b2?w=800" alt="Couples Photography" loading="lazy">
+                    <div class="portfolio-overlay">
+                        <h3>Couples</h3>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Retouch -->
+            <div class="portfolio-item" data-category="retouch">
+                <div class="portfolio-image">
+                    <img src="https://images.unsplash.com/photo-1542038784456-1ea8e935640e?w=800" alt="Retouch Photography" loading="lazy">
+                    <div class="portfolio-overlay">
+                        <h3>Retouch</h3>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Lifestyle -->
+            <div class="portfolio-item" data-category="lifestyle">
+                <div class="portfolio-image">
+                    <img src="https://images.unsplash.com/photo-1511988617509-a57c8a288659?w=800" alt="Lifestyle Photography" loading="lazy">
+                    <div class="portfolio-overlay">
+                        <h3>Lifestyle</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about-section">
+        <div class="about-container">
+            <div class="about-content">
+                <h2 class="section-title">About Me</h2>
+                <div class="about-text">
+                    <p>Hello! I'm Imthiyaz Ahmed, a passionate photographer dedicated to capturing life's most precious moments. With years of experience across multiple photography disciplines, I specialize in creating visual stories that resonate and endure.</p>
+                    <p>My approach combines technical expertise with artistic vision, ensuring every shot tells a unique story. Whether it's the joy of a wedding, the elegance of fashion, or the intimacy of a portrait session, I strive to deliver images that exceed expectations.</p>
+                    <p>Based on a foundation of creativity and professionalism, I work closely with clients to understand their vision and bring it to life through my lens.</p>
+                </div>
+                
+                <div class="skills">
+                    <h3>Specializations</h3>
+                    <div class="skills-grid">
+                        <div class="skill-item">Wedding Photography</div>
+                        <div class="skill-item">Portrait Photography</div>
+                        <div class="skill-item">Event Coverage</div>
+                        <div class="skill-item">Commercial Shoots</div>
+                        <div class="skill-item">Product Photography</div>
+                        <div class="skill-item">Photo Retouching</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+        <div class="contact-container">
+            <h2 class="section-title">Get In Touch</h2>
+            <p class="section-subtitle">Let's create something beautiful together</p>
+            
+            <div class="contact-content">
+                <div class="contact-form-wrapper">
+                    <form id="contact-form" class="contact-form">
+                        <div class="form-group">
+                            <input type="text" id="name" name="name" placeholder="Your Name" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" id="email" name="email" placeholder="Your Email" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" id="subject" name="subject" placeholder="Subject" required>
+                        </div>
+                        <div class="form-group">
+                            <textarea id="message" name="message" rows="5" placeholder="Your Message" required></textarea>
+                        </div>
+                        <button type="submit" class="submit-btn">Send Message</button>
+                    </form>
+                </div>
+                
+                <div class="contact-info">
+                    <div class="info-item">
+                        <h3>Email</h3>
+                        <p>contact@imthiyazahmed.com</p>
+                    </div>
+                    <div class="info-item">
+                        <h3>Phone</h3>
+                        <p>+1 (555) 123-4567</p>
+                    </div>
+                    <div class="info-item">
+                        <h3>Follow Me</h3>
+                        <div class="social-links">
+                            <a href="#" class="social-link">Instagram</a>
+                            <a href="#" class="social-link">Facebook</a>
+                            <a href="#" class="social-link">LinkedIn</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2026 Imthiyaz Ahmed Photography. All rights reserved.</p>
+    </footer>
+
+    <!-- Image Lightbox Modal -->
+    <div id="lightbox" class="lightbox">
+        <span class="lightbox-close">&times;</span>
+        <img class="lightbox-content" id="lightbox-img">
+        <div class="lightbox-caption"></div>
+    </div>
+
+    <!-- External Libraries -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    
+    <!-- Custom Scripts -->
+    <script src="js/threejs-scene.js"></script>
+    <script src="js/scroll.js"></script>
+    <script src="js/portfolio.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

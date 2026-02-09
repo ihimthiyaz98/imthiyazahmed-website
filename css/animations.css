@@ -1,0 +1,423 @@
+/* ==========================================
+   Keyframe Animations
+   ========================================== */
+
+/* Pulse animation for loading icon */
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    50% {
+        transform: scale(1.1);
+        opacity: 0.7;
+    }
+}
+
+/* Scroll indicator wheel animation */
+@keyframes scroll {
+    0% {
+        opacity: 1;
+        transform: translateX(-50%) translateY(0);
+    }
+    100% {
+        opacity: 0;
+        transform: translateX(-50%) translateY(20px);
+    }
+}
+
+/* Fade in from bottom */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Fade in */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Fade in from left */
+@keyframes fadeInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Fade in from right */
+@keyframes fadeInRight {
+    from {
+        opacity: 0;
+        transform: translateX(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Scale in */
+@keyframes scaleIn {
+    from {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* Rotate animation */
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* Float animation */
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+}
+
+/* Glow pulse */
+@keyframes glowPulse {
+    0%, 100% {
+        box-shadow: 0 0 20px rgba(139, 92, 246, 0.5);
+    }
+    50% {
+        box-shadow: 0 0 40px rgba(139, 92, 246, 0.8);
+    }
+}
+
+/* Shimmer effect */
+@keyframes shimmer {
+    0% {
+        background-position: -1000px 0;
+    }
+    100% {
+        background-position: 1000px 0;
+    }
+}
+
+/* Holographic gradient animation */
+@keyframes holographic {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* ==========================================
+   Animation Utility Classes
+   ========================================== */
+
+.fade-in {
+    animation: fadeIn 0.8s ease-out forwards;
+}
+
+.fade-in-up {
+    animation: fadeInUp 0.8s ease-out forwards;
+}
+
+.fade-in-left {
+    animation: fadeInLeft 0.8s ease-out forwards;
+}
+
+.fade-in-right {
+    animation: fadeInRight 0.8s ease-out forwards;
+}
+
+.scale-in {
+    animation: scaleIn 0.6s ease-out forwards;
+}
+
+.float {
+    animation: float 3s ease-in-out infinite;
+}
+
+.glow-pulse {
+    animation: glowPulse 2s ease-in-out infinite;
+}
+
+/* ==========================================
+   Delayed Animations
+   ========================================== */
+
+.delay-1 {
+    animation-delay: 0.1s;
+}
+
+.delay-2 {
+    animation-delay: 0.2s;
+}
+
+.delay-3 {
+    animation-delay: 0.3s;
+}
+
+.delay-4 {
+    animation-delay: 0.4s;
+}
+
+.delay-5 {
+    animation-delay: 0.5s;
+}
+
+/* ==========================================
+   Hover & Transition Effects
+   ========================================== */
+
+.hover-lift {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hover-lift:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(139, 92, 246, 0.3);
+}
+
+.hover-scale {
+    transition: transform 0.3s ease;
+}
+
+.hover-scale:hover {
+    transform: scale(1.05);
+}
+
+.hover-glow {
+    transition: box-shadow 0.3s ease;
+}
+
+.hover-glow:hover {
+    box-shadow: 0 0 30px rgba(139, 92, 246, 0.6);
+}
+
+/* ==========================================
+   Smooth Transitions
+   ========================================== */
+
+.smooth-transition {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.smooth-transition-slow {
+    transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* ==========================================
+   Loading State Animations
+   ========================================== */
+
+.skeleton-loading {
+    background: linear-gradient(
+        90deg,
+        rgba(139, 92, 246, 0.1) 25%,
+        rgba(139, 92, 246, 0.2) 50%,
+        rgba(139, 92, 246, 0.1) 75%
+    );
+    background-size: 1000px 100%;
+    animation: shimmer 2s infinite;
+}
+
+/* ==========================================
+   Scroll-triggered Animation Classes
+   ========================================== */
+
+.reveal {
+    opacity: 0;
+    transform: translateY(50px);
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+    transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.reveal-left {
+    opacity: 0;
+    transform: translateX(-50px);
+}
+
+.reveal-left.active {
+    opacity: 1;
+    transform: translateX(0);
+    transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.reveal-right {
+    opacity: 0;
+    transform: translateX(50px);
+}
+
+.reveal-right.active {
+    opacity: 1;
+    transform: translateX(0);
+    transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.reveal-scale {
+    opacity: 0;
+    transform: scale(0.8);
+}
+
+.reveal-scale.active {
+    opacity: 1;
+    transform: scale(1);
+    transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* ==========================================
+   Glassmorphism Effect
+   ========================================== */
+
+.glass {
+    background: rgba(139, 92, 246, 0.1);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(139, 92, 246, 0.2);
+}
+
+.glass-strong {
+    background: rgba(139, 92, 246, 0.2);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(139, 92, 246, 0.3);
+}
+
+/* ==========================================
+   Gradient Animation
+   ========================================== */
+
+.gradient-animated {
+    background-size: 200% 200%;
+    animation: holographic 5s ease infinite;
+}
+
+/* ==========================================
+   Particle Effect (for decorative elements)
+   ========================================== */
+
+@keyframes particles {
+    0% {
+        transform: translateY(0) rotate(0deg);
+        opacity: 0;
+    }
+    10% {
+        opacity: 1;
+    }
+    90% {
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(-100vh) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+.particle {
+    position: absolute;
+    width: 4px;
+    height: 4px;
+    background: var(--primary-purple);
+    border-radius: 50%;
+    animation: particles 10s linear infinite;
+}
+
+/* ==========================================
+   Text Animations
+   ========================================== */
+
+.text-gradient {
+    background: linear-gradient(135deg, var(--primary-purple), var(--magenta), var(--violet));
+    background-size: 200% 200%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    animation: holographic 5s ease infinite;
+}
+
+.text-glow {
+    text-shadow: 0 0 20px rgba(139, 92, 246, 0.5),
+                 0 0 40px rgba(139, 92, 246, 0.3);
+}
+
+/* ==========================================
+   Button Animations
+   ========================================== */
+
+.btn-shimmer {
+    position: relative;
+    overflow: hidden;
+}
+
+.btn-shimmer::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        90deg,
+        transparent,
+        rgba(255, 255, 255, 0.2),
+        transparent
+    );
+    transition: left 0.5s;
+}
+
+.btn-shimmer:hover::before {
+    left: 100%;
+}
+
+/* ==========================================
+   Performance Optimizations
+   ========================================== */
+
+/* Enable hardware acceleration for animations */
+.gpu-accelerated {
+    transform: translateZ(0);
+    will-change: transform, opacity;
+}
+
+/* Reduce motion for accessibility */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}
